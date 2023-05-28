@@ -4,7 +4,7 @@ metadata:
   name: instavote
   namespace: instavote
 spec:
-  interval: 30s
   url: https://github.com/manuelnucci/lfs269-instavote.git
   ref:
     branch: main
+  interval: 30s
