@@ -11,3 +11,8 @@ spec:
     name: instavote
   path: "./deploy/vote"
   prune: true
+  healthChecks:
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: vote
+      namespace: instavote
