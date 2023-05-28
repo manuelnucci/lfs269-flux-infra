@@ -4,12 +4,14 @@ metadata:
   name: vote
   namespace: instavote
 spec:
-  interval: 1m
-  targetNamespace: instavote
   sourceRef:
     kind: GitRepository
     name: instavote
   path: "./deploy/vote"
+  targetNamespace: instavote
+  dependsOn:
+    - name: redis
+  interval: 1m
   prune: true
   healthChecks:
     - apiVersion: apps/v1
