@@ -1,8 +1,8 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
-  name: instavote
-  namespace: instavote
+  name: instavote-dev
+  namespace: instavote-dev
 spec:
   url: https://github.com/manuelnucci/lfs269-instavote.git
   ref:
