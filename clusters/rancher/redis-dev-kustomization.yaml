@@ -1,20 +1,18 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: vote
-  namespace: instavote
+  name: redis-dev
+  namespace: instavote-dev
 spec:
   sourceRef:
     kind: GitRepository
     name: instavote
-  path: "./deploy/vote"
-  targetNamespace: instavote
-  dependsOn:
-    - name: redis
+  path: "./deploy/redis"
+  targetNamespace: instavote-dev
   interval: 1m
   prune: true
   healthChecks:
     - apiVersion: apps/v1
       kind: Deployment
-      name: vote
-      namespace: instavote
+      name: redis
+      namespace: instavote-dev
