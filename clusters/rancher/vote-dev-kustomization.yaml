@@ -6,7 +6,7 @@ metadata:
 spec:
   sourceRef:
     kind: GitRepository
-    name: instavote
+    name: instavote-dev
   path: "./deploy/vote"
   targetNamespace: instavote-dev
   dependsOn:
