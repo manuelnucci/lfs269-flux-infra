@@ -1,0 +1,18 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: redis-staging
+  namespace: instavote-staging
+spec:
+  sourceRef:
+    kind: GitRepository
+    name: instavote-staging
+  path: ./deploy/redis
+  targetNamespace: instavote-staging
+  interval: 1m
+  prune: true
+  healthChecks:
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: redis
+      namespace: instavote-staging

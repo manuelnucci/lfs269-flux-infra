@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: instavote-staging
+  namespace: instavote-staging
+spec:
+  url: https://github.com/manuelnucci/lfs269-instavote.git
+  ref:
+    branch: main
+  interval: 30s

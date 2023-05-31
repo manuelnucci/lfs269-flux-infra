@@ -7,7 +7,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: instavote-dev
-  path: "./deploy/redis"
+  path: ./deploy/redis
   targetNamespace: instavote-dev
   interval: 1m
   prune: true
