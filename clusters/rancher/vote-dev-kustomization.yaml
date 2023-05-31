@@ -7,7 +7,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: instavote-dev
-  path: ./deploy/vote/dev
+  path: ./deploy/vote/overlays/dev
   targetNamespace: instavote-dev
   dependsOn:
     - name: redis-dev
