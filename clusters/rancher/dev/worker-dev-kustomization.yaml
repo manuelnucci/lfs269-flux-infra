@@ -1,0 +1,18 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: worker-dev
+  namespace: instavote-dev
+spec:
+  sourceRef:
+    kind: GitRepository
+    name: instavote-dev
+  path: ./deploy/worker/overlays/dev
+  targetNamespace: instavote-dev
+  interval: 1m
+  prune: true
+  healthChecks:
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: worker
+      namespace: instavote-dev
