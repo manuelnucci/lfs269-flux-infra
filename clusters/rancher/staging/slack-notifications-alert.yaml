@@ -10,7 +10,19 @@ spec:
   eventSources:
     - kind: Kustomization
       name: "*"
+      namespace: instavote-dev
     - kind: GitRepository
       name: "*"
+      namespace: instavote-dev
     - kind: HelmRelease
       name: "*"
+      namespace: instavote-dev
+    - kind: Kustomization
+      name: "*"
+      namespace: instavote-staging
+    - kind: GitRepository
+      name: "*"
+      namespace: instavote-staging
+    - kind: HelmRelease
+      name: "*"
+      namespace: instavote-staging
