@@ -8,3 +8,5 @@ spec:
   ref:
     branch: main
   interval: 30s
+  secretRef:
+    name: github-instavote
