@@ -4,5 +4,5 @@ metadata:
   name: vote
   namespace: instavote-staging
 spec:
-  image: manuelnucci/vote
+  image: manuelnucci/lfs269-vote
   interval: 1m
