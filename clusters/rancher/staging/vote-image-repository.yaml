@@ -1,0 +1,8 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: vote
+  namespace: instavote-staging
+spec:
+  image: manuelnucci/vote
+  interval: 1m
