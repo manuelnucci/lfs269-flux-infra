@@ -14,8 +14,8 @@ spec:
         branch: main
     commit:
       author:
-        email: fluxcdbot@users.noreply.github.com
         name: 'FluxCD Bot'
+        email: fluxcdbot@users.noreply.github.com
       messageTemplate: '{{range .Updated.Images}}{{println .}}{{end}}'
     push:
       branch: main
