@@ -7,10 +7,10 @@ spec:
   chart:
     spec:
       chart: ./deploy/charts/result
-      version: 0.1.0
       sourceRef:
         kind: GitRepository
         name: instavote-staging
+      reconcileStrategy: Revision
   targetNamespace: instavote-staging
   interval: 1m
 
